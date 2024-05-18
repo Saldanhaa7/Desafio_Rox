@@ -1,0 +1,30 @@
+version: "3"
+services:
+  pyspark:
+    image: "jupyter/pyspark-notebook:spark-3.3.2"
+    working_dir: /home/app/
+    volumes:
+      - /home/saldanha/Desafio_Rox/app/:/home/app/
+      - /home/saldanha/Desafio_Rox/jars/:/opt/spark/jars/  # Montar o diretório dos JARs
+    ports:
+      - 8888:8888
+    environment:
+      - SPARK_CLASSPATH=/opt/spark/jars/postgresql-42.2.24.jar  # Configurar o classpath
+    depends_on:
+      - postgres
+    networks:
+      - minha-rede-master
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: Rox
+      POSTGRES_USER: admin-rox
+      POSTGRES_PASSWORD: testeBruno
+    ports:
+      - "5431:5432"
+    networks:
+      - minha-rede-master
+
+networks:
+  minha-rede-master:
