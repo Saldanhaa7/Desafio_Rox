@@ -4,12 +4,9 @@ services:
     image: "jupyter/pyspark-notebook:spark-3.3.2"
     working_dir: /home/app/
     volumes:
-      - /home/saldanha/Desafio_Rox/app/:/home/app/
-      - /home/saldanha/Desafio_Rox/jars/:/opt/spark/jars/  # Montar o diretório dos JARs
+      - /home/saldanha/Desafio_Rox/app/:/home/app/ 
     ports:
       - 8888:8888
-    environment:
-      - SPARK_CLASSPATH=/opt/spark/jars/postgresql-42.2.24.jar  # Configurar o classpath
     depends_on:
       - postgres
     networks:
