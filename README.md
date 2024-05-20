@@ -10,9 +10,11 @@
   - PostgreSQL: 16.3
   - docker-compose: 2.24.6
 ## Perguntas
+
 ### Pergunta 1: Quais são os 10 clientes mais recorrentes da loja?
 ![image](https://github.com/Saldanhaa7/Desafio_Rox/assets/102561300/d3ba82dd-4aaf-4ef7-b994-62d5e6bb38bf)
 #### Como haviam mais clientes com duas compras, fiz um critério de desempate para ordenar pelos clientes que mais gastaram!
+
 ### Pergunta 2: Quanto cada cliente gastou na loja?
 ![image](https://github.com/Saldanhaa7/Desafio_Rox/assets/102561300/5ef04d9d-f6a1-4db8-8fc8-b188a258de3e)
 ![image](https://github.com/Saldanhaa7/Desafio_Rox/assets/102561300/6fee3015-a6da-4479-86f5-6a9843fb2194)
